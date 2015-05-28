@@ -5,7 +5,7 @@ class HeadphonesUpdated
     static void Main()
     {
         // inputs
-        int diameter = 9;
+        int diameter = int.Parse(Console.ReadLine());
 
         //print top
         for (int i = 0; i < diameter; i++)
