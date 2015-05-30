@@ -10,7 +10,7 @@ class TheExplorer
         int inner = 1;
         int outter = length / 2;
 
-        //prin
+        //print
         for (int i = 0; i < length; i++)
         {
             string innerPart;
