@@ -25,7 +25,6 @@ class Numerology
             {
                 if (char.IsUpper(word[i]))
                 {
-
                     letterValue += (Char.ToLower(word[i]) - 96) * 2;
                 }
                 else
