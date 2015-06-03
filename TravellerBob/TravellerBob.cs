@@ -12,6 +12,7 @@ class TravellerBob
 
         // logic
         double contractTravels = contractMonths * 12D;
+
         double familyTravels = familyMonths * 4D;
         double regularTravels = regularMonths * (12D * 60D / 100D);
         double totalTravels = contractTravels + familyTravels + regularTravels;
