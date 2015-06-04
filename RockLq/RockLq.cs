@@ -23,7 +23,7 @@ public class RockLq
         outter = input - 4;
         for (int i = 1; i < input / 2; i++)
         {
-            Console.WriteLine("*{0}*{2}*{1}*{2}*{0}*", new string('.',outter), new string('.', input), new string('.', middle));
+            Console.WriteLine("*{0}*{2}*{1}*{2}*{0}*", new string('.', outter), new string('.', input), new string('.', middle));
             middle += 2;
             outter -= 2;
         }
