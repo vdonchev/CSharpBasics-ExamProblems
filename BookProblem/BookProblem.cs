@@ -3,7 +3,7 @@
 class BookProblem
 {
     static void Main()
-    {
+    { 
         // Inputs
         int bookPages = int.Parse(Console.ReadLine());
         int campingDays = int.Parse(Console.ReadLine());
