@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DD2BCB14-8B2B-47B2-A783-046072C28DBE}</ProjectGuid>
+    <ProjectGuid>{D7263DC2-2E8D-4D5D-8F9E-9BAA3328DD24}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BasketBattle</RootNamespace>

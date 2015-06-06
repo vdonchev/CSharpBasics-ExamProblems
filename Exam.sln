@@ -91,6 +91,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpyHard", "SpyHard\SpyHard.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiggestTriple", "BiggestTriple\BiggestTriple.csproj", "{5C7176AB-EFFE-4003-AF1C-0DA7337E59EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketBattle", "BasketBattle\BasketBattle.csproj", "{D7263DC2-2E8D-4D5D-8F9E-9BAA3328DD24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -253,6 +255,10 @@ Global
 		{5C7176AB-EFFE-4003-AF1C-0DA7337E59EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C7176AB-EFFE-4003-AF1C-0DA7337E59EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C7176AB-EFFE-4003-AF1C-0DA7337E59EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7263DC2-2E8D-4D5D-8F9E-9BAA3328DD24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7263DC2-2E8D-4D5D-8F9E-9BAA3328DD24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7263DC2-2E8D-4D5D-8F9E-9BAA3328DD24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7263DC2-2E8D-4D5D-8F9E-9BAA3328DD24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -297,5 +303,6 @@ Global
 		{0495CA19-2DA1-4A18-AAD8-768504BC0444} = {42D84C05-FB6D-4311-AD60-0796D7F12239}
 		{83A14AD1-1E36-4B5F-8DD8-D3EF73CE6017} = {23329346-3647-4E70-98A1-3E6B55CAD478}
 		{5C7176AB-EFFE-4003-AF1C-0DA7337E59EA} = {23329346-3647-4E70-98A1-3E6B55CAD478}
+		{D7263DC2-2E8D-4D5D-8F9E-9BAA3328DD24} = {23329346-3647-4E70-98A1-3E6B55CAD478}
 	EndGlobalSection
 EndGlobal
