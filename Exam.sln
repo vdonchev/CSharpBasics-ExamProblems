@@ -115,6 +115,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LettersSymbolsNumbers", "Le
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddEvenElements", "OddEvenElements\OddEvenElements.csproj", "{D4FC67B9-6801-40BD-BCD2-B9E6C8A57A65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitsInverter2", "BitsInverter2\BitsInverter2.csproj", "{6A1E3EF3-FB71-457A-8FF0-6486561FE058}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -325,6 +327,10 @@ Global
 		{D4FC67B9-6801-40BD-BCD2-B9E6C8A57A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4FC67B9-6801-40BD-BCD2-B9E6C8A57A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4FC67B9-6801-40BD-BCD2-B9E6C8A57A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A1E3EF3-FB71-457A-8FF0-6486561FE058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A1E3EF3-FB71-457A-8FF0-6486561FE058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A1E3EF3-FB71-457A-8FF0-6486561FE058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A1E3EF3-FB71-457A-8FF0-6486561FE058}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -381,5 +387,6 @@ Global
 		{3F183F2C-1019-42BE-A081-4D70460E640B} = {23329346-3647-4E70-98A1-3E6B55CAD478}
 		{CB4B10F0-5C7B-4D89-B756-C198D3D16367} = {23329346-3647-4E70-98A1-3E6B55CAD478}
 		{D4FC67B9-6801-40BD-BCD2-B9E6C8A57A65} = {23329346-3647-4E70-98A1-3E6B55CAD478}
+		{6A1E3EF3-FB71-457A-8FF0-6486561FE058} = {B29A6C35-17A6-416E-BAB4-40A1DBD77C87}
 	EndGlobalSection
 EndGlobal
