@@ -1,35 +1,44 @@
 ﻿using System;
+using System.Collections.Generic;
 
 class CatchTheBits
 {
     static void Main()
     {
-        Console.WriteLine(1 % 3);
-
         int count = int.Parse(Console.ReadLine());
         int step = int.Parse(Console.ReadLine());
+        string bitHolder = string.Empty;
         int index = 0;
-        string output = string.Empty;
+        List<int> output = new List<int>();
 
         for (int i = 0; i < count; i++)
         {
             int num = int.Parse(Console.ReadLine());
 
-            for (int j = 7; j>= 0; j--)
+            for (int bit = 7; bit >= 0; bit--)
             {
-                if (index % step == 1 || (step == 1 && index > 0))
+                if ((index % step == 1) || (step == 1 && index > 0))
                 {
-                    if (output.Length < 9)
+                    bitHolder += num >> bit & 1;
+                    if (bitHolder.Length >= 8)
                     {
-                        output += num >> j & 1;
-                    }
-                    else
-                    {
-                        // to be continued
+                        output.Add(Convert.ToInt32(bitHolder, 2));
+                        bitHolder = string.Empty;
                     }
                 }
+
                 index++;
             }
+        }
+
+        if (bitHolder.Length > 0)
+        {
+            output.Add(Convert.ToInt32(bitHolder.PadRight(8, '0'), 2));
+        }
+
+        foreach (var nums in output)
+        {
+            Console.WriteLine(nums);
         }
     }
 }

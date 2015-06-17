@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CatchTheBits2")]
+[assembly: AssemblyTitle("HalfByteSwapper")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("CatchTheBits2")]
+[assembly: AssemblyProduct("HalfByteSwapper")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a9a2e543-c580-4408-b2fd-9e01eafda4ef")]
+[assembly: Guid("c016e3e8-18e6-4164-99c6-d0bfb8fd68aa")]
 
 // Version information for an assembly consists of the following four values:
 //
