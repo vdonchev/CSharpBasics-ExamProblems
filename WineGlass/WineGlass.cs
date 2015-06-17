@@ -30,7 +30,7 @@ class WineGlass
         // print bottom
         for (int i = 0; i < bottom; i++)
         {
-            Console.WriteLine("{0}", new string('-', size));
+            Console.WriteLine(new string('-', size));
         }
     }
 }
