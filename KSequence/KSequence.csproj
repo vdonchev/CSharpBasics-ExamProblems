@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1990A5E2-BB2C-44C8-89D3-DFB889B9DE62}</ProjectGuid>
+    <ProjectGuid>{6E568C59-E11B-43A1-BA35-6ABFA63B51B6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LongestAlphabeticalWord</RootNamespace>
-    <AssemblyName>LongestAlphabeticalWord</AssemblyName>
+    <RootNamespace>KSequence</RootNamespace>
+    <AssemblyName>KSequence</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LongestAlphabeticalWord.cs" />
+    <Compile Include="KSequence.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

@@ -1,207 +1,151 @@
 ﻿using System;
-using System.Data;
 
 class LongestAlphabeticalWord
 {
     static void Main()
     {
-        string phrase = Console.ReadLine();
+        string word = Console.ReadLine();
         int matrixSize = int.Parse(Console.ReadLine());
 
-        int phraseLenth = phrase.Length;
-        int index = 0;
-
+        char[] wordByChars = word.ToCharArray();
         char[,] matrix = new char[matrixSize, matrixSize];
 
         // fill the matrix
+        int index = 0;
         for (int row = 0; row < matrixSize; row++)
         {
             for (int col = 0; col < matrixSize; col++)
             {
-                matrix[row, col] = phrase[index];
+                matrix[row, col] = wordByChars[index % word.Length];
                 index++;
-                if (index == phraseLenth)
-                {
-                    index = 0;
-                }
+                //Console.Write(matrix[row, col]);
             }
+            //Console.WriteLine();
         }
-        string longest = String.Empty;
-        string temp = String.Empty;
 
+        string longestWord = string.Empty;
 
-        // top-bottom
-        for (int col = 0; col < matrixSize; col++)
+        // check left-to-right
+        for (int x = 0; x < matrixSize; x++)
         {
-            int step = 0;
-            char prev = matrix[0, col];
-
-            for (int row = 0; row < matrixSize; row++)
+            string wordX = "";
+            for (int y = 0; y < matrixSize; y++)
             {
-                if (step == 0)
-                {
-                    prev = matrix[row, col];
-                    step++;
-                    temp += prev;
-                }
-                else
-                {
-                    char curr = matrix[row, col];
-                    if (curr > prev)
-                    {
-                        step++;
-                        temp += curr;
-                        prev = curr;
-                    }
-                    else
-                    {
-                        step = 0;
-                        longest = findLongest(longest, temp);
-                        temp = String.Empty;
-                    }
-                }
+                wordX += matrix[x, y];
             }
-            longest = findLongest(longest, temp);
-            temp = String.Empty;
+
+            string curLongest = CheckWord(wordX);
+            longestWord = CompareWords(longestWord, curLongest);
         }
 
-        // bottom-top
-        for (int col = 0; col < matrixSize; col++)
+        // check right-to-left
+        for (int x = 0; x < matrixSize; x++)
         {
-            int step = 0;
-            char prev = matrix[matrixSize - 1, col];
-
-            for (int row = matrixSize - 1; row >= 0; row--)
+            string wordX = "";
+            for (int y = matrixSize - 1; y >= 0; y--)
             {
-                if (step == 0)
-                {
-                    prev = matrix[row, col];
-                    step++;
-                    temp += prev;
-                }
-                else
-                {
-                    char curr = matrix[row, col];
-                    if (curr > prev)
-                    {
-                        step++;
-                        temp += curr;
-                        prev = curr;
-                    }
-                    else
-                    {
-                        step = 0;
-                        longest = findLongest(longest, temp);
-                        temp = String.Empty;
-                    }
-                }
+                wordX += matrix[x, y];
             }
-            longest = findLongest(longest, temp);
-            temp = String.Empty;
+
+            string curLongest = CheckWord(wordX);
+            longestWord = CompareWords(longestWord, curLongest);
         }
 
-        // left-right
-        for (int row = 0; row < matrixSize; row++)
+        // check top-to-bottom
+        for (int y = 0; y < matrixSize; y++)
         {
-            int step = 0;
-            char prev = matrix[row, matrixSize - 1];
-
-            for (int col = matrixSize - 1; col >= 0; col--)
+            string wordX = "";
+            for (int x = 0; x < matrixSize; x++)
             {
-                if (step == 0)
-                {
-                    prev = matrix[row, col];
-                    step++;
-                    temp += prev;
-                }
-                else
-                {
-                    char curr = matrix[row, col];
-                    if (curr > prev)
-                    {
-                        step++;
-                        temp += curr;
-                        prev = curr;
-                    }
-                    else
-                    {
-                        step = 0;
-                        longest = findLongest(longest, temp);
-                        temp = String.Empty;
-                    }
-                }
+                wordX += matrix[x, y];
             }
-            longest = findLongest(longest, temp);
-            temp = String.Empty;
+
+            string curLongest = CheckWord(wordX);
+            longestWord = CompareWords(longestWord, curLongest);
         }
 
-        // right-left
-        for (int row = 0; row < matrixSize; row++)
+        // check bottom-to-top
+        for (int y = 0; y < matrixSize; y++)
         {
-            int step = 0;
-            char prev = matrix[row, 0];
-
-            for (int col = 0; col < matrixSize; col++)
+            string wordX = "";
+            for (int x = matrixSize - 1; x >= 0; x--)
             {
-                if (step == 0)
-                {
-                    prev = matrix[row, col];
-                    step++;
-                    temp += prev;
-                }
-                else
-                {
-                    char curr = matrix[row, col];
-                    if (curr > prev)
-                    {
-                        step++;
-                        temp += curr;
-                        prev = curr;
-                    }
-                    else
-                    {
-                        step = 0;
-                        longest = findLongest(longest, temp);
-                        temp = String.Empty;
-                    }
-                }
+                wordX += matrix[x, y];
             }
-            longest = findLongest(longest, temp);
-            temp = String.Empty;
+
+            string curLongest = CheckWord(wordX);
+            longestWord = CompareWords(longestWord, curLongest);
         }
 
-        Console.WriteLine(longest);
+        Console.WriteLine(longestWord);
 
-
-        // debug
-        for (int row = 0; row < matrixSize; row++)
-        {
-            for (int col = 0; col < matrixSize; col++)
-            {
-                Console.Write(matrix[row, col]);
-            }
-            Console.WriteLine();
-        }
     }
 
-    private static string findLongest(string longest, string currLongest)
+    static string CompareWords(string longest, string currLongest)
     {
-        if (currLongest.Length > longest.Length)
+        if (longest.Length > currLongest.Length)
+        {
+            return longest;
+        }
+        if (longest.Length < currLongest.Length)
         {
             return currLongest;
         }
 
-        if (currLongest.Length == longest.Length)
+        for (int i = 0; i < longest.Length; i++)
         {
-            for (int i = 0; i < currLongest.Length; i++)
+            if (longest[i] < currLongest[i])
             {
-                if (currLongest[i] != longest[i])
+                return longest;
+            }
+            if (longest[i] > currLongest[i])
+            {
+                return currLongest;
+            }
+        }
+        return longest;
+    }
+
+    static string CheckWord(string word)
+    {
+        string longest = "";
+        for (int i = 0; i < word.Length; i++)
+        {
+            char prevChar = word[i];
+            string curLongest = "" + prevChar;
+            for (int j = i + 1; j < word.Length; j++)
+            {
+                char currChar = word[j];
+                if (prevChar < currChar)
                 {
-                    return (currLongest[i] > longest[i]) ? longest : currLongest;
+                    curLongest += currChar;
+                    prevChar = currChar;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            if (curLongest.Length > longest.Length)
+            {
+                longest = curLongest;
+            }
+            else if (curLongest.Length == longest.Length)
+            {
+                for (int j = 0; j < curLongest.Length; j++)
+                {
+                    if (curLongest[j] < longest[j])
+                    {
+                        longest = curLongest;
+                    }
+                    else if (curLongest[j] > longest[j])
+                    {
+                        curLongest = longest;
+                    }
                 }
             }
         }
-
         return longest;
     }
 }
